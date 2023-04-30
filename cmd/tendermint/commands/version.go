@@ -23,8 +23,8 @@ var VersionCmd = &cobra.Command{
 			}{
 				Tendermint:    version.TMCoreSemVer,
 				ABCI:          version.ABCIVersion,
-				BlockProtocol: version.BlockProtocol,
-				P2PProtocol:   version.P2PProtocol,
+				BlockProtocol: uint64(version.BlockProtocol),
+				P2PProtocol:   uint64(version.P2PProtocol),
 			}, "", "  ")
 			fmt.Println(string(values))
 		} else {

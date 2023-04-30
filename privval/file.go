@@ -11,6 +11,7 @@ import (
 
 	"github.com/deepakdahiya/tendermint/crypto"
 	"github.com/deepakdahiya/tendermint/crypto/ed25519"
+	"github.com/deepakdahiya/tendermint/crypto/secp256k1"
 	tmbytes "github.com/deepakdahiya/tendermint/libs/bytes"
 	tmjson "github.com/deepakdahiya/tendermint/libs/json"
 	tmos "github.com/deepakdahiya/tendermint/libs/os"
@@ -170,6 +171,49 @@ func NewFilePV(privKey crypto.PrivKey, keyFilePath, stateFilePath string) *FileP
 // and sets the filePaths, but does not call Save().
 func GenFilePV(keyFilePath, stateFilePath string) *FilePV {
 	return NewFilePV(ed25519.GenPrivKey(), keyFilePath, stateFilePath)
+}
+
+// Generate pv file from crypto.PrivKey. Made to include filepath
+func GenFilePVFromPrivKey(privKey crypto.PrivKey, keyFilePath, stateFilePath string) *FilePV {
+	return &FilePV{
+		Key: FilePVKey{
+			Address:  privKey.PubKey().Address(),
+			PubKey:   privKey.PubKey(),
+			PrivKey:  privKey,
+			filePath: keyFilePath,
+		},
+		LastSignState: FilePVLastSignState{
+			Step:     stepNone,
+			filePath: stateFilePath,
+		},
+	}
+
+	// &FilePV{
+	// 	Address:  privKey.PubKey().Address(),
+	// 	PubKey:   privKey.PubKey(),
+	// 	PrivKey:  privKey,
+	// 	LastStep: stepNone,
+	// 	filePath: filePath,
+	// }
+}
+
+// GenFilePV generates a new validator with randomly generated private key
+// and sets the filePaths, but does not call Save().
+func GenFilePVSecp(keyFilePath, stateFilePath string) *FilePV {
+	privKey := secp256k1.GenPrivKey()
+
+	return &FilePV{
+		Key: FilePVKey{
+			Address:  privKey.PubKey().Address(),
+			PubKey:   privKey.PubKey(),
+			PrivKey:  privKey,
+			filePath: keyFilePath,
+		},
+		LastSignState: FilePVLastSignState{
+			Step:     stepNone,
+			filePath: stateFilePath,
+		},
+	}
 }
 
 // LoadFilePV loads a FilePV from the filePaths.  The FilePV handles double

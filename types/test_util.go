@@ -87,7 +87,7 @@ func MakeVote(
 func MakeBlock(height int64, txs []Tx, lastCommit *Commit, evidence []Evidence) *Block {
 	block := &Block{
 		Header: Header{
-			Version: tmversion.Consensus{Block: version.BlockProtocol, App: 0},
+			Version: tmversion.Consensus{Block: uint64(version.BlockProtocol), App: 0},
 			Height:  height,
 		},
 		Data: Data{

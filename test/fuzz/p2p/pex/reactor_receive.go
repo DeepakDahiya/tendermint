@@ -59,8 +59,8 @@ var privKey = ed25519.GenPrivKey()
 var nodeID = p2p.PubKeyToID(privKey.PubKey())
 var defaultNodeInfo = p2p.DefaultNodeInfo{
 	ProtocolVersion: p2p.NewProtocolVersion(
-		version.P2PProtocol,
-		version.BlockProtocol,
+		uint64(version.P2PProtocol),
+		uint64(version.BlockProtocol),
 		0,
 	),
 	DefaultNodeID: nodeID,

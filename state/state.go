@@ -30,7 +30,7 @@ var (
 // we hear from the app what protocol version it is running.
 var InitStateVersion = tmstate.Version{
 	Consensus: tmversion.Consensus{
-		Block: version.BlockProtocol,
+		Block: uint64(version.BlockProtocol),
 		App:   0,
 	},
 	Software: version.TMCoreSemVer,

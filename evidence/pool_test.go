@@ -408,7 +408,7 @@ func initializeBlockStore(db dbm.DB, state sm.State, valAddr []byte) *store.Bloc
 		block, _ := state.MakeBlock(i, []types.Tx{}, lastCommit, nil,
 			state.Validators.GetProposer().Address)
 		block.Header.Time = defaultEvidenceTime.Add(time.Duration(i) * time.Minute)
-		block.Header.Version = tmversion.Consensus{Block: version.BlockProtocol, App: 1}
+		block.Header.Version = tmversion.Consensus{Block: uint64(version.BlockProtocol), App: 1}
 		const parts = 1
 		partSet := block.MakePartSet(parts)
 

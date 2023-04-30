@@ -10,6 +10,6 @@ import (
 // It contains only compile-time version information.
 var RequestInfo = abci.RequestInfo{
 	Version:      version.TMCoreSemVer,
-	BlockVersion: version.BlockProtocol,
-	P2PVersion:   version.P2PProtocol,
+	BlockVersion: uint64(version.BlockProtocol),
+	P2PVersion:   uint64(version.P2PProtocol),
 }

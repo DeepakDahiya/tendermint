@@ -739,7 +739,7 @@ func makeRandHeader() Header {
 	randBytes := tmrand.Bytes(tmhash.Size)
 	randAddress := tmrand.Bytes(crypto.AddressSize)
 	h := Header{
-		Version:            tmversion.Consensus{Block: version.BlockProtocol, App: 1},
+		Version:            tmversion.Consensus{Block: uint64(version.BlockProtocol), App: 1},
 		ChainID:            chainID,
 		Height:             height,
 		Time:               t,

@@ -350,14 +350,14 @@ func logNodeStartupInfo(state sm.State, pubKey crypto.PubKey, logger, consensusL
 	// Log the version info.
 	logger.Info("Version info",
 		"software", version.TMCoreSemVer,
-		"block", version.BlockProtocol,
-		"p2p", version.P2PProtocol,
+		"block", uint64(version.BlockProtocol),
+		"p2p", uint64(version.P2PProtocol),
 	)
 
 	// If the state and software differ in block version, at least log it.
-	if state.Version.Consensus.Block != version.BlockProtocol {
+	if state.Version.Consensus.Block != uint64(version.BlockProtocol) {
 		logger.Info("Software and state have different block protocols",
-			"software", version.BlockProtocol,
+			"software", uint64(version.BlockProtocol),
 			"state", state.Version.Consensus.Block,
 		)
 	}
@@ -1342,7 +1342,7 @@ func makeNodeInfo(
 
 	nodeInfo := p2p.DefaultNodeInfo{
 		ProtocolVersion: p2p.NewProtocolVersion(
-			version.P2PProtocol, // global
+			uint64(version.P2PProtocol), // global
 			state.Version.Consensus.Block,
 			state.Version.Consensus.App,
 		),

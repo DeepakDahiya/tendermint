@@ -254,7 +254,7 @@ func makeVote(
 
 func makeHeaderRandom() *Header {
 	return &Header{
-		Version:            tmversion.Consensus{Block: version.BlockProtocol, App: 1},
+		Version:            tmversion.Consensus{Block: uint64(version.BlockProtocol), App: 1},
 		ChainID:            tmrand.Str(12),
 		Height:             int64(tmrand.Uint16()) + 1,
 		Time:               time.Now(),

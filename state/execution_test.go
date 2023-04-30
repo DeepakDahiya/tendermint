@@ -142,7 +142,7 @@ func TestBeginBlockByzantineValidators(t *testing.T) {
 	privVal := privVals[state.Validators.Validators[0].Address.String()]
 	blockID := makeBlockID([]byte("headerhash"), 1000, []byte("partshash"))
 	header := &types.Header{
-		Version:            tmversion.Consensus{Block: version.BlockProtocol, App: 1},
+		Version:            tmversion.Consensus{Block: uint64(version.BlockProtocol), App: 1},
 		ChainID:            state.ChainID,
 		Height:             10,
 		Time:               defaultEvidenceTime,

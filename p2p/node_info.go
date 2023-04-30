@@ -55,8 +55,8 @@ type ProtocolVersion struct {
 // defaultProtocolVersion populates the Block and P2P versions using
 // the global values, but not the App.
 var defaultProtocolVersion = NewProtocolVersion(
-	version.P2PProtocol,
-	version.BlockProtocol,
+	uint64(version.P2PProtocol),
+	uint64(version.BlockProtocol),
 	0,
 )
 

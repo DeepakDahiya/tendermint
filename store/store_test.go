@@ -187,7 +187,7 @@ func TestBlockStoreSaveLoadBlock(t *testing.T) {
 	require.Error(t, err)
 
 	header1 := types.Header{
-		Version:         tmversion.Consensus{Block: version.BlockProtocol},
+		Version:         tmversion.Consensus{Block: uint64(version.BlockProtocol)},
 		Height:          1,
 		ChainID:         "block_test",
 		Time:            tmtime.Now(),
@@ -224,7 +224,7 @@ func TestBlockStoreSaveLoadBlock(t *testing.T) {
 		{
 			block: newBlock( // New block at height 5 in empty block store is fine
 				types.Header{
-					Version:         tmversion.Consensus{Block: version.BlockProtocol},
+					Version:         tmversion.Consensus{Block: uint64(version.BlockProtocol)},
 					Height:          5,
 					ChainID:         "block_test",
 					Time:            tmtime.Now(),
@@ -539,7 +539,7 @@ func TestLoadBlockMeta(t *testing.T) {
 	// 3. A good blockMeta serialized and saved to the DB should be retrievable
 	meta := &types.BlockMeta{Header: types.Header{
 		Version: tmversion.Consensus{
-			Block: version.BlockProtocol, App: 0}, Height: 1, ProposerAddress: tmrand.Bytes(crypto.AddressSize)}}
+			Block: uint64(version.BlockProtocol), App: 0}, Height: 1, ProposerAddress: tmrand.Bytes(crypto.AddressSize)}}
 	pbm := meta.ToProto()
 	err = db.Set(calcBlockMetaKey(height), mustEncode(pbm))
 	require.NoError(t, err)

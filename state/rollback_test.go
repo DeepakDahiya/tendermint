@@ -127,7 +127,7 @@ func setupStateStore(t *testing.T, height int64) state.Store {
 	initialState := state.State{
 		Version: tmstate.Version{
 			Consensus: tmversion.Consensus{
-				Block: version.BlockProtocol,
+				Block: uint64(version.BlockProtocol),
 				App:   10,
 			},
 			Software: version.TMCoreSemVer,

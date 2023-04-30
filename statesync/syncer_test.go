@@ -52,7 +52,7 @@ func TestSyncer_SyncAny(t *testing.T) {
 		ChainID: "chain",
 		Version: tmstate.Version{
 			Consensus: tmversion.Consensus{
-				Block: version.BlockProtocol,
+				Block: uint64(version.BlockProtocol),
 				App:   testAppVersion,
 			},
 			Software: version.TMCoreSemVer,
