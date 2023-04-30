@@ -8,18 +8,18 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
+	abci "github.com/deepakdahiya/tendermint/abci/types"
+	"github.com/deepakdahiya/tendermint/libs/log"
 
-	cfg "github.com/tendermint/tendermint/config"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	nm "github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/proxy"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	core_grpc "github.com/tendermint/tendermint/rpc/grpc"
-	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	cfg "github.com/deepakdahiya/tendermint/config"
+	tmnet "github.com/deepakdahiya/tendermint/libs/net"
+	nm "github.com/deepakdahiya/tendermint/node"
+	"github.com/deepakdahiya/tendermint/p2p"
+	"github.com/deepakdahiya/tendermint/privval"
+	"github.com/deepakdahiya/tendermint/proxy"
+	ctypes "github.com/deepakdahiya/tendermint/rpc/core/types"
+	core_grpc "github.com/deepakdahiya/tendermint/rpc/grpc"
+	rpcclient "github.com/deepakdahiya/tendermint/rpc/jsonrpc/client"
 )
 
 // Options helps with specifying some parameters for our RPC testing for greater

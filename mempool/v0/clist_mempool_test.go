@@ -15,18 +15,18 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abciclimocks "github.com/tendermint/tendermint/abci/client/mocks"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	abciserver "github.com/tendermint/tendermint/abci/server"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/log"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/mempool"
-	"github.com/tendermint/tendermint/proxy"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/deepakdahiya/tendermint/abci/client"
+	abciclimocks "github.com/deepakdahiya/tendermint/abci/client/mocks"
+	"github.com/deepakdahiya/tendermint/abci/example/kvstore"
+	abciserver "github.com/deepakdahiya/tendermint/abci/server"
+	abci "github.com/deepakdahiya/tendermint/abci/types"
+	"github.com/deepakdahiya/tendermint/config"
+	"github.com/deepakdahiya/tendermint/libs/log"
+	tmrand "github.com/deepakdahiya/tendermint/libs/rand"
+	"github.com/deepakdahiya/tendermint/libs/service"
+	"github.com/deepakdahiya/tendermint/mempool"
+	"github.com/deepakdahiya/tendermint/proxy"
+	"github.com/deepakdahiya/tendermint/types"
 )
 
 // A cleanupFunc cleans up any config / test files created for a particular
@@ -639,7 +639,7 @@ func TestMempoolTxsBytes(t *testing.T) {
 }
 
 // This will non-deterministically catch some concurrency failures like
-// https://github.com/tendermint/tendermint/issues/3509
+// https://github.com/deepakdahiya/tendermint/issues/3509
 // TODO: all of the tests should probably also run using the remote proxy app
 // since otherwise we're not actually testing the concurrency of the mempool here!
 func TestMempoolRemoteAppConcurrency(t *testing.T) {

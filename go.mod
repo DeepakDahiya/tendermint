@@ -1,4 +1,4 @@
-module github.com/tendermint/tendermint
+module github.com/deepakdahiya/tendermint
 
 go 1.18
 
@@ -50,6 +50,7 @@ require github.com/vektra/mockery/v2 v2.14.0
 require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/informalsystems/tm-load-test v1.0.0
+	github.com/tendermint/tendermint v0.34.14
 	gonum.org/v1/gonum v0.12.0
 	google.golang.org/protobuf v1.28.2-0.20220831092852-f930b1dc76e8
 )

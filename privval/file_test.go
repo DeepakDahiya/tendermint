@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
-	tmtime "github.com/tendermint/tendermint/types/time"
+	"github.com/deepakdahiya/tendermint/crypto/ed25519"
+	"github.com/deepakdahiya/tendermint/crypto/tmhash"
+	tmjson "github.com/deepakdahiya/tendermint/libs/json"
+	tmrand "github.com/deepakdahiya/tendermint/libs/rand"
+	tmproto "github.com/deepakdahiya/tendermint/proto/tendermint/types"
+	"github.com/deepakdahiya/tendermint/types"
+	tmtime "github.com/deepakdahiya/tendermint/types/time"
 )
 
 func TestGenLoadValidator(t *testing.T) {

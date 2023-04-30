@@ -1,13 +1,13 @@
 package proxy
 
 import (
-	"github.com/tendermint/tendermint/libs/bytes"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/deepakdahiya/tendermint/libs/bytes"
+	lrpc "github.com/deepakdahiya/tendermint/light/rpc"
+	rpcclient "github.com/deepakdahiya/tendermint/rpc/client"
+	ctypes "github.com/deepakdahiya/tendermint/rpc/core/types"
+	rpcserver "github.com/deepakdahiya/tendermint/rpc/jsonrpc/server"
+	rpctypes "github.com/deepakdahiya/tendermint/rpc/jsonrpc/types"
+	"github.com/deepakdahiya/tendermint/types"
 )
 
 func RPCRoutes(c *lrpc.Client) map[string]*rpcserver.RPCFunc {

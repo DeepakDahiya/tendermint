@@ -5,10 +5,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
+	"github.com/deepakdahiya/tendermint/libs/log"
+	"github.com/deepakdahiya/tendermint/libs/service"
+	tmsync "github.com/deepakdahiya/tendermint/libs/sync"
+	privvalproto "github.com/deepakdahiya/tendermint/proto/tendermint/privval"
 )
 
 // SignerListenerEndpointOption sets an optional parameter on the SignerListenerEndpoint.

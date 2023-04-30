@@ -10,15 +10,15 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	tmbytes "github.com/tendermint/tendermint/libs/bytes"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	service "github.com/tendermint/tendermint/libs/service"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	ctypes "github.com/tendermint/tendermint/rpc/core/types"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/deepakdahiya/tendermint/abci/types"
+	"github.com/deepakdahiya/tendermint/crypto/merkle"
+	tmbytes "github.com/deepakdahiya/tendermint/libs/bytes"
+	tmmath "github.com/deepakdahiya/tendermint/libs/math"
+	service "github.com/deepakdahiya/tendermint/libs/service"
+	rpcclient "github.com/deepakdahiya/tendermint/rpc/client"
+	ctypes "github.com/deepakdahiya/tendermint/rpc/core/types"
+	rpctypes "github.com/deepakdahiya/tendermint/rpc/jsonrpc/types"
+	"github.com/deepakdahiya/tendermint/types"
 )
 
 var errNegOrZeroHeight = errors.New("negative or zero height")

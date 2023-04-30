@@ -10,11 +10,11 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	"github.com/tendermint/tendermint/libs/timer"
+	"github.com/deepakdahiya/tendermint/abci/types"
+	tmnet "github.com/deepakdahiya/tendermint/libs/net"
+	"github.com/deepakdahiya/tendermint/libs/service"
+	tmsync "github.com/deepakdahiya/tendermint/libs/sync"
+	"github.com/deepakdahiya/tendermint/libs/timer"
 )
 
 const (

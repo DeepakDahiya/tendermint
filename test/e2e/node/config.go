@@ -6,7 +6,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/tendermint/tendermint/test/e2e/app"
+	"github.com/deepakdahiya/tendermint/test/e2e/app"
 )
 
 // Config is the application configuration.
