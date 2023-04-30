@@ -20,7 +20,7 @@ const (
 	keyFileContents = `{
 	"address": "D08FCA3BA74CF17CBFC15E64F9505302BB0E2748",
 	"pub_key": {
-		"type": "tendermint/PubKeyEd25519",
+		"type": "tendermint/PubKey",
 		"value": "ZCsuTjaczEyon70nmKxwvwu+jqrbq5OH3yQjcK0SFxc="
 		},
 	"priv_key": {
@@ -59,7 +59,7 @@ const (
 		{
 		"address": "D08FCA3BA74CF17CBFC15E64F9505302BB0E2748",
 		"pub_key": {
-			"type": "tendermint/PubKeyEd25519",
+			"type": "tendermint/PubKey",
 			"value": "ZCsuTjaczEyon70nmKxwvwu+jqrbq5OH3yQjcK0SFxc="
 		},
 		"power": "10",

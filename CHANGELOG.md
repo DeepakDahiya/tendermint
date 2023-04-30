@@ -519,9 +519,9 @@ Special thanks to external contributors on this release: @james-ray, @fedekunze,
     - `SimpleProofsFromByteSlices` has been renamed to `ProofsFromByteSlices`
   - [crypto] [\#4941](https://github.com/deepakdahiya/tendermint/pull/4941) Remove suffixes from all keys. (@marbar3778)
     - ed25519: type `PrivKeyEd25519` is now `PrivKey`
-    - ed25519: type `PubKeyEd25519` is now `PubKey`
+    - ed25519: type `PubKey` is now `PubKey`
     - secp256k1: type`PrivKeySecp256k1` is now `PrivKey`
-    - secp256k1: type`PubKeySecp256k1` is now `PubKey`
+    - secp256k1: type`PubKey` is now `PubKey`
     - sr25519: type `PrivKeySr25519` is now `PrivKey`
     - sr25519: type `PubKeySr25519` is now `PubKey`
   - [crypto] [\#5214](https://github.com/deepakdahiya/tendermint/pull/5214) Change `GenPrivKeySecp256k1` to `GenPrivKeyFromSecret` to be consistent with other keys (@marbar3778)

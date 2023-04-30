@@ -18,7 +18,7 @@ import (
 // -------------------------------------
 const (
 	PrivKeyName = "tendermint/PrivKeySecp256k1"
-	PubKeyName  = "tendermint/PubKeySecp256k1"
+	PubKeyName  = "tendermint/PubKey"
 
 	KeyType     = "secp256k1"
 	PrivKeySize = 32
@@ -178,7 +178,7 @@ func (pubKey PubKey) Bytes() []byte {
 }
 
 func (pubKey PubKey) String() string {
-	return fmt.Sprintf("PubKeySecp256k1{%X}", []byte(pubKey))
+	return fmt.Sprintf("PubKey{%X}", []byte(pubKey))
 }
 
 func (pubKey PubKey) Equals(other crypto.PubKey) bool {

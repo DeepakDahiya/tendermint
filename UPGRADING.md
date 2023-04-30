@@ -140,7 +140,7 @@ Tendermint 0.34 includes new and updated consensus parameters.
 #### Keys
 
 * Keys no longer include a type prefix. For example, ed25519 pubkeys have been renamed from
-  `PubKeyEd25519` to `PubKey`. This reduces stutter (e.g., `ed25519.PubKey`).
+  `PubKey` to `PubKey`. This reduces stutter (e.g., `ed25519.PubKey`).
 * Keys are now byte slices (`[]byte`) instead of byte arrays (`[<size>]byte`).
 * The multisig functionality that was previously in Tendermint now has
   a new home within the Cosmos SDK:

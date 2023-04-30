@@ -29,7 +29,7 @@ var secpDataTable = []keyData{
 	},
 }
 
-func TestPubKeySecp256k1Address(t *testing.T) {
+func TestPubKeyAddress(t *testing.T) {
 	for _, d := range secpDataTable {
 		privB, _ := hex.DecodeString(d.priv)
 		pubB, _ := hex.DecodeString(d.pub)

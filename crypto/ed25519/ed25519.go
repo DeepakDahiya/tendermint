@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 
+	amino "github.com/tendermint/go-amino"
 	"golang.org/x/crypto/ed25519"
 
 	"github.com/deepakdahiya/tendermint/crypto"
@@ -19,7 +20,7 @@ var _ crypto.PrivKey = PrivKey{}
 
 const (
 	PrivKeyName = "tendermint/PrivKeyEd25519"
-	PubKeyName  = "tendermint/PubKeyEd25519"
+	PubKeyName  = "tendermint/PubKey"
 	// PubKeySize is is the size, in bytes, of public keys as used in this package.
 	PubKeySize = 32
 	// PrivateKeySize is the size, in bytes, of private keys as used in this package.
@@ -34,9 +35,18 @@ const (
 	KeyType = "ed25519"
 )
 
+var cdc = amino.NewCodec()
+
 func init() {
 	tmjson.RegisterType(PubKey{}, PubKeyName)
 	tmjson.RegisterType(PrivKey{}, PrivKeyName)
+	cdc.RegisterInterface((*crypto.PubKey)(nil), nil)
+	cdc.RegisterConcrete(PubKey{},
+		PubKeyName, nil)
+
+	cdc.RegisterInterface((*crypto.PrivKey)(nil), nil)
+	cdc.RegisterConcrete(PrivKey{},
+		PrivKeyName, nil)
 }
 
 // PrivKey implements crypto.PrivKey.
@@ -44,7 +54,7 @@ type PrivKey []byte
 
 // Bytes returns the privkey byte format.
 func (privKey PrivKey) Bytes() []byte {
-	return []byte(privKey)
+	return cdc.MustMarshalBinaryBare(privKey)
 }
 
 // Sign produces a signature on the provided message.
@@ -129,7 +139,7 @@ func GenPrivKeyFromSecret(secret []byte) PrivKey {
 
 var _ crypto.PubKey = PubKey{}
 
-// PubKeyEd25519 implements crypto.PubKey for the Ed25519 signature scheme.
+// PubKey implements crypto.PubKey for the Ed25519 signature scheme.
 type PubKey []byte
 
 // Address is the SHA256-20 of the raw pubkey bytes.
@@ -155,7 +165,7 @@ func (pubKey PubKey) VerifySignature(msg []byte, sig []byte) bool {
 }
 
 func (pubKey PubKey) String() string {
-	return fmt.Sprintf("PubKeyEd25519{%X}", []byte(pubKey))
+	return fmt.Sprintf("PubKey{%X}", []byte(pubKey))
 }
 
 func (pubKey PubKey) Type() string {

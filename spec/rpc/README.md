@@ -144,7 +144,7 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
     "validator_info": {
       "address": "38FB765D0092470989360ECA1C89CD06C2C1583C",
       "pub_key": {
-        "type": "tendermint/PubKeyEd25519",
+        "type": "tendermint/PubKey",
         "value": "Z+8kntVegi1sQiWLYwFSVLNWqdAUGEy7lskL78gxLZI="
       },
       "voting_power": "0"
@@ -347,7 +347,7 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
           "total_voting_power": 0,
           "validator": {
             "pub_key": {
-              "type": "tendermint/PubKeyEd25519",
+              "type": "tendermint/PubKey",
               "value": "A6DoBUypNtUAyEHWtQ9bFjfNg8Bo9CrnkUGl6k6OHN4="
             },
             "voting_power": 0,
@@ -460,7 +460,7 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
           "total_voting_power": 0,
           "validator": {
             "pub_key": {
-              "type": "tendermint/PubKeyEd25519",
+              "type": "tendermint/PubKey",
               "value": "A6DoBUypNtUAyEHWtQ9bFjfNg8Bo9CrnkUGl6k6OHN4="
             },
             "voting_power": 0,
@@ -584,7 +584,7 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
     "validator_updates": [
       {
         "pub_key": {
-          "type": "tendermint/PubKeyEd25519",
+          "type": "tendermint/PubKey",
           "value": "9tK9IT+FPdf2qm+5c2qaxi10sWP+3erWTKgftn2PaQM="
         },
         "power": "300"
@@ -724,7 +724,7 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
       {
         "address": "000001E443FD237E4B616E2FA69DF4EE3D49A94F",
         "pub_key": {
-          "type": "tendermint/PubKeyEd25519",
+          "type": "tendermint/PubKey",
           "value": "9tK9IT+FPdf2qm+5c2qaxi10sWP+3erWTKgftn2PaQM="
         },
         "voting_power": "239727",
@@ -786,7 +786,7 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
         {
           "address": "B00A6323737F321EB0B8D59C6FD497A14B60938A",
           "pub_key": {
-            "type": "tendermint/PubKeyEd25519",
+            "type": "tendermint/PubKey",
             "value": "cOQZvh/h9ZioSeUMZB/1Vy1Xo5x2sjrVjlE/qHnYifM="
           },
           "power": "9328525",

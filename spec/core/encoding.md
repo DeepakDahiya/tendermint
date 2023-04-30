@@ -262,7 +262,7 @@ For instance, an ED25519 PubKey would look like:
 
 ```json
 {
-  "type": "tendermint/PubKeyEd25519",
+  "type": "tendermint/PubKey",
   "value": "uZ4h63OFWuQ36ZZ4Bd6NF+/w9fWUwrOncrQsackrsTk="
 }
 ```
